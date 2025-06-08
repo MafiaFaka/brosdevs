@@ -8,7 +8,7 @@
 body {
   background: #121212;
   color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
 
@@ -40,7 +40,17 @@ body {
   font-weight: bold;
 }
 
-.nav a {
+/* Ocultar menú toggle por defecto */
+.menu-toggle {
+  display: none;
+}
+
+/* Navegación normal */
+nav {
+  display: flex;
+}
+
+nav a {
   margin: 0 1rem;
   color: #eee;
   text-decoration: none;
@@ -48,7 +58,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav a:hover {
+nav a:hover {
   color: #00bfff;
 }
 
@@ -107,6 +117,7 @@ body {
   border-radius: 10px;
   padding: 1rem;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
 .game-card img {
@@ -136,6 +147,11 @@ body {
   text-decoration: underline;
 }
 
+.game-card:hover {
+  box-shadow: 0 4px 20px rgba(0,191,255,0.4);
+  transform: translateY(-5px);
+}
+
 /* BLOG */
 .blog-list {
   display: grid;
@@ -147,6 +163,7 @@ body {
   background: #222;
   padding: 1rem;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .blog-list img {
@@ -173,6 +190,11 @@ body {
   text-decoration: underline;
 }
 
+.blog-list article:hover {
+  box-shadow: 0 4px 20px rgba(0,191,255,0.4);
+  transform: translateY(-5px);
+}
+
 /* MERCH */
 .merch-grid {
   display: grid;
@@ -185,6 +207,7 @@ body {
   padding: 1rem;
   text-align: center;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .merch-item img {
@@ -211,6 +234,11 @@ body {
   text-decoration: underline;
 }
 
+.merch-item:hover {
+  box-shadow: 0 4px 20px rgba(0,191,255,0.4);
+  transform: translateY(-5px);
+}
+
 /* FOOTER */
 .footer {
   background: #111;
@@ -232,4 +260,40 @@ body {
 .footer .footer-links a:hover,
 .footer .social a:hover {
   color: #eee;
+}
+
+/* Responsive */
+
+/* Navbar móvil */
+@media (max-width: 768px) {
+  .nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #00bfff;
+    font-size: 1.5rem;
+    user-select: none;
+  }
+  /* Ajuste para game-carousel, blog-list y merch-grid */
+  .game-carousel,
+  .blog-list,
+  .merch-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column;
+  }
 }

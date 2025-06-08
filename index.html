@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BrosDevs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,6 +13,7 @@
   <header class="nav">
     <div class="container">
       <h1 class="logo">BrosDevs</h1>
+      <div class="menu-toggle">&#9776;</div>
       <nav>
         <a href="#home">Home</a>
         <a href="#games">Games</a>
@@ -34,18 +36,17 @@
     <h2>Our Games</h2>
     <div class="game-carousel">
       <div class="game-card">
-        <img src="img/game1.jpg" alt="Game 1" />
+        <img src="img/game1.jpg" alt="Game 1" loading="lazy" />
         <h3>Adventure Quest</h3>
         <p>Explore magical worlds and defeat monsters.</p>
         <a href="#">View on Roblox</a>
       </div>
       <div class="game-card">
-        <img src="img/game2.jpg" alt="Game 2" />
+        <img src="img/game2.jpg" alt="Game 2" loading="lazy" />
         <h3>Space Racer</h3>
         <p>Fast-paced racing through the stars.</p>
         <a href="#">View on Roblox</a>
       </div>
-      <!-- Añade más juegos aquí -->
     </div>
   </section>
 
@@ -54,18 +55,17 @@
     <h2>Latest Dev Blog</h2>
     <div class="blog-list">
       <article>
-        <img src="img/blog1.jpg" alt="Blog 1" />
+        <img src="img/blog1.jpg" alt="Blog 1" loading="lazy" />
         <h3>New Pets Update!</h3>
         <p>Introducing adorable pets that accompany you in-game.</p>
         <a href="#">Read More</a>
       </article>
       <article>
-        <img src="img/blog2.jpg" alt="Blog 2" />
+        <img src="img/blog2.jpg" alt="Blog 2" loading="lazy" />
         <h3>Space Racer Expansion</h3>
         <p>New tracks and vehicles coming soon.</p>
         <a href="#">Read More</a>
       </article>
-      <!-- Más artículos -->
     </div>
   </section>
 
@@ -74,18 +74,17 @@
     <h2>Merchandise</h2>
     <div class="merch-grid">
       <div class="merch-item">
-        <img src="img/plush1.jpg" alt="Plush Toy" />
+        <img src="img/plush1.jpg" alt="Plush Toy" loading="lazy" />
         <h4>Plush Toy</h4>
         <p>$39.99</p>
         <a href="#">Shop Now</a>
       </div>
       <div class="merch-item">
-        <img src="img/shirt1.jpg" alt="T-Shirt" />
+        <img src="img/shirt1.jpg" alt="T-Shirt" loading="lazy" />
         <h4>T-Shirt</h4>
         <p>$24.99</p>
         <a href="#">Shop Now</a>
       </div>
-      <!-- Más productos -->
     </div>
   </section>
 
@@ -106,5 +105,13 @@
     </div>
   </footer>
 
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
