@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +6,29 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #121212;
-  color: #f4f4f4;
 }
 
-a {
-  color: #00bfff;
-  text-decoration: none;
-}
-
-header {
-  background: #1f1f1f;
-  padding: 1rem 0;
-  border-bottom: 2px solid #00bfff;
-}
-
+/* Contenedor para centralizar contenido */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+.nav {
+  background: #111;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,38 +36,77 @@ header {
 
 .logo {
   font-size: 1.8rem;
+  color: #00bfff;
   font-weight: bold;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
   color: #00bfff;
 }
 
-nav a {
-  margin-left: 1rem;
-  font-weight: 500;
-}
-
+/* HERO */
 .hero {
+  background: url('img/hero-bg.jpg') center/cover no-repeat;
+  padding: 6rem 1rem;
   text-align: center;
-  padding: 5rem 1rem;
-  background: linear-gradient(135deg, #1f1f1f, #292929);
+  color: #fff;
 }
 
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: #00bfff;
+  color: #121212;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0099cc;
+}
+
+/* SECCIONES */
 .section {
   padding: 4rem 1rem;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+/* GAMES */
+.game-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
 }
 
 .game-card {
-  background: #1f1f1f;
-  padding: 1rem;
+  min-width: 260px;
+  background: #222;
+  color: #eee;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 1rem;
+  flex-shrink: 0;
 }
 
 .game-card img {
@@ -73,11 +114,122 @@ nav a {
   border-radius: 6px;
 }
 
-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+.game-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.game-card p {
   font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.game-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.game-card a:hover {
+  text-decoration: underline;
+}
+
+/* BLOG */
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-list article {
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.blog-list img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.blog-list h3 {
+  margin-top: 0.5rem;
+}
+
+.blog-list p {
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+}
+
+.blog-list a {
+  color: #00bfff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blog-list a:hover {
+  text-decoration: underline;
+}
+
+/* MERCH */
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.merch-item {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.merch-item img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.merch-item h4 {
+  margin-top: 0.8rem;
+}
+
+.merch-item p {
+  margin: 0.4rem 0;
+  font-weight: bold;
+}
+
+.merch-item a {
+  color: #00bfff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.merch-item a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
   color: #888;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer .footer-links a,
+.footer .social a {
+  margin: 0 0.5rem;
+  color: #888;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover,
+.footer .social a:hover {
+  color: #eee;
 }

@@ -2,55 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BrosDevs</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- NAVBAR -->
+  <header class="nav">
     <div class="container">
       <h1 class="logo">BrosDevs</h1>
       <nav>
+        <a href="#home">Home</a>
         <a href="#games">Games</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#merch">Merch</a>
+        <a href="#contact">Contact Us</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to BrosDevs</h2>
-    <p>We create fun, engaging games on Roblox and beyond.</p>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h2>Indie Game Studio</h2>
+    <p>We create engaging games on Roblox and beyond.</p>
+    <a href="#games" class="cta-button">Explore Our Games</a>
   </section>
 
+  <!-- GAMES -->
   <section id="games" class="section">
     <h2>Our Games</h2>
-    <div class="game-grid">
+    <div class="game-carousel">
       <div class="game-card">
-        <img src="https://via.placeholder.com/300x180" alt="Game 1" />
-        <h3>Game Name</h3>
-        <p>Description of the game.</p>
+        <img src="img/game1.jpg" alt="Game 1" />
+        <h3>Adventure Quest</h3>
+        <p>Explore magical worlds and defeat monsters.</p>
+        <a href="#">View on Roblox</a>
       </div>
       <div class="game-card">
-        <img src="https://via.placeholder.com/300x180" alt="Game 2" />
-        <h3>Another Game</h3>
-        <p>More game details.</p>
+        <img src="img/game2.jpg" alt="Game 2" />
+        <h3>Space Racer</h3>
+        <p>Fast-paced racing through the stars.</p>
+        <a href="#">View on Roblox</a>
       </div>
+      <!-- Añade más juegos aquí -->
     </div>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>BrosDevs is an indie game studio focused on innovation and creativity.</p>
+  <!-- BLOG -->
+  <section id="blogs" class="section">
+    <h2>Latest Dev Blog</h2>
+    <div class="blog-list">
+      <article>
+        <img src="img/blog1.jpg" alt="Blog 1" />
+        <h3>New Pets Update!</h3>
+        <p>Introducing adorable pets that accompany you in-game.</p>
+        <a href="#">Read More</a>
+      </article>
+      <article>
+        <img src="img/blog2.jpg" alt="Blog 2" />
+        <h3>Space Racer Expansion</h3>
+        <p>New tracks and vehicles coming soon.</p>
+        <a href="#">Read More</a>
+      </article>
+      <!-- Más artículos -->
+    </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Reach out to us on Discord or Twitter!</p>
+  <!-- MERCH -->
+  <section id="merch" class="section">
+    <h2>Merchandise</h2>
+    <div class="merch-grid">
+      <div class="merch-item">
+        <img src="img/plush1.jpg" alt="Plush Toy" />
+        <h4>Plush Toy</h4>
+        <p>$39.99</p>
+        <a href="#">Shop Now</a>
+      </div>
+      <div class="merch-item">
+        <img src="img/shirt1.jpg" alt="T-Shirt" />
+        <h4>T-Shirt</h4>
+        <p>$24.99</p>
+        <a href="#">Shop Now</a>
+      </div>
+      <!-- Más productos -->
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 BrosDevs. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">Terms Of Service</a>
+        <a href="#">No Refund Policy</a>
+      </div>
+      <div class="social">
+        <a href="#">Twitter</a>
+        <a href="#">Discord</a>
+        <a href="#">YouTube</a>
+        <a href="#">Roblox</a>
+      </div>
+      <p>© 2025 BrosDevs. All rights reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
