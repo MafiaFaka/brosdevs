@@ -105,6 +105,7 @@ nav a:hover {
 .game-carousel {
   display: flex;
   overflow-x: auto;
+  overflow: visible;
   gap: 1rem;
   padding: 1rem 0;
   scroll-behavior: smooth;
