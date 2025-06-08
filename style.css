@@ -1,0 +1,83 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+header {
+  background: #1f1f1f;
+  padding: 1rem 0;
+  border-bottom: 2px solid #00bfff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #1f1f1f, #292929);
+}
+
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.game-card {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
