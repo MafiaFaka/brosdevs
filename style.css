@@ -40,12 +40,10 @@ body {
   font-weight: bold;
 }
 
-/* Ocultar menú toggle por defecto */
 .menu-toggle {
   display: none;
 }
 
-/* Navegación normal */
 nav {
   display: flex;
 }
@@ -123,6 +121,11 @@ nav a:hover {
 
 .game-card img {
   width: 100%;
+  max-width: 280px;
+  max-height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
   border-radius: 6px;
 }
 
@@ -169,7 +172,11 @@ nav a:hover {
 
 .blog-list img {
   width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
   border-radius: 6px;
+  display: block;
 }
 
 .blog-list h3 {
@@ -213,6 +220,11 @@ nav a:hover {
 
 .merch-item img {
   width: 100%;
+  max-width: 220px;
+  max-height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
   border-radius: 6px;
 }
 
@@ -264,8 +276,6 @@ nav a:hover {
 }
 
 /* Responsive */
-
-/* Navbar móvil */
 @media (max-width: 768px) {
   .nav .container {
     flex-direction: column;
@@ -290,7 +300,6 @@ nav a:hover {
     font-size: 1.5rem;
     user-select: none;
   }
-  /* Ajuste para game-carousel, blog-list y merch-grid */
   .game-carousel,
   .blog-list,
   .merch-grid {
