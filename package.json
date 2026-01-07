@@ -1,25 +1,16 @@
 {
   "name": "brosdevs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend y Frontend para el proyecto BrosDevs",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MafiaFaka/brosdevs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/MafiaFaka/brosdevs/issues"
-  },
-  "homepage": "https://github.com/MafiaFaka/brosdevs#readme",
   "dependencies": {
-    "axios": "^1.13.2",
-    "express": "^5.2.1"
-  }
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "discord.js": "^13.0.0"
+  },
+  "author": "",
+  "license": "ISC"
 }
