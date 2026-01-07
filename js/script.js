@@ -783,8 +783,8 @@ console.log('%cWelcome to our website! Try the Konami Code for a surprise... �
 console.log('%c✨ Enhanced with modern effects!', 'font-size: 12px; color: #a855f7;');
 
 /* ============================================
-   LIVE STATS FROM RAILWAY API (Internal)
-   ============================================ */
+   LIVE STATS FROM RAILWAY API (Internal) | OLD VERSION
+   ============================================ 
 async function loadLiveStats() {
     // Use relative path since frontend & backend are on the same domain now!
     const API_BASE = '/api';
@@ -833,6 +833,62 @@ async function loadLiveStats() {
         console.log('%c⚠️ Stats API not available - using default values', 'color: #f59e0b;');
     }
 }
+    */
+
+/* ============================================
+   LIVE STATS FROM MY API (Backend)
+   ============================================ */
+async function loadLiveStats() {
+    const API_BASE = 'https://<tu_nombre_de_usuario>.<tu_proyecto>.repl.co/api';  // URL del servidor backend (deberás poner la URL de Replit)
+
+    // Helper para actualizar todos los elementos con el atributo data-stat
+    function updateStat(selector, value) {
+        const elements = document.querySelectorAll(`[data-stat="${selector}"]`);
+        elements.forEach(el => {
+            if (value !== null && value !== undefined) {
+                el.setAttribute('data-target', value);
+                el.textContent = formatNumber(value); // Formatear el número si es necesario
+            }
+        });
+    }
+
+    try {
+        const gameIds = '16779369397,88491083870667';  // Game IDs separados por coma (reemplaza con tus propios IDs)
+        const [playersRes, groupsRes, discordRes] = await Promise.allSettled([
+            fetch(`${API_BASE}/players?gameIds=${gameIds}`).then(r => r.ok ? r.json() : null),
+            fetch(`${API_BASE}/groups`).then(r => r.ok ? r.json() : null),
+            fetch(`${API_BASE}/discord`).then(r => r.ok ? r.json() : null)
+        ]);
+
+        // Actualizar estadísticas de jugadores
+        if (playersRes.status === 'fulfilled' && playersRes.value) {
+            playersRes.value.forEach(gameData => {
+                updateStat(`total-visits-${gameData.gameId}`, gameData.totalVisits);
+                updateStat(`playing-${gameData.gameId}`, gameData.totalPlaying);
+            });
+        }
+
+        // Actualizar estadísticas de grupo
+        if (groupsRes.status === 'fulfilled' && groupsRes.value) {
+            updateStat('group-members', groupsRes.value.totalMembers);
+        }
+
+        // Actualizar estadísticas de Discord
+        if (discordRes.status === 'fulfilled' && discordRes.value) {
+            updateStat('discord-members', discordRes.value.memberCount);
+        }
+
+        console.log('%c📊 Live stats loaded from API!', 'color: #22c55e;');
+    } catch (error) {
+        console.log('%c⚠️ Stats API not available - using default values', 'color: #f59e0b;');
+    }
+}
+
+// Función para formatear los números (opcional)
+function formatNumber(number) {
+    return new Intl.NumberFormat().format(number);
+}
+
 
 /* ============================================
    DISCORD STATUS (LANYARD API)
