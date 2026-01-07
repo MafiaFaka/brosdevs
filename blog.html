@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Blog | Bros Devs</title>
+    <meta name="description" content="Development blogs and updates from Bros Devs">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:site_name" content="Bros Devs">
+    <meta property="og:title" content="Developer Blog | Bros Devs">
+    <meta property="og:description" content="Development blogs and updates from Bros Devs">
+    <meta property="og:image" content="assets/logo-full.webp">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-icon.webp">
+
+    <!-- Google Fonts (Same as index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons (Same as index.html) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- Navigation (Exact match to index.html) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-icon.webp" alt="Bros Devs Logo">
+                <span>Bros Devs</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#games" class="nav-link">Games</a></li>
+                <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="index.html#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="subscribe.html" class="nav-link nav-subscribe">Subscribe</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Header (Title like BigGames) -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">
+                <svg class="blog-title-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                        stroke="url(#blogIconGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 7H12" stroke="url(#blogIconGradient)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 11H17" stroke="url(#blogIconGradient)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 15H17" stroke="url(#blogIconGradient)" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="blogIconGradient" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#4A90D9"/>
+                            <stop offset="1" stop-color="#8B5CF6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                Developer Blogs
+            </h1>
+            <p class="blog-subtitle">Updates, patch notes, and news from the team</p>
+
+            <!-- Next Update Countdown -->
+            <div class="next-update-banner" id="next-update-banner">
+                <div class="update-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="update-content">
+                    <span class="update-label">Next Update</span>
+                    <span class="update-countdown" id="update-countdown">Loading...</span>
+                </div>
+                <div class="update-timestamp" id="update-timestamp"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post (Latest) -->
+    <section class="featured-post-section">
+        <div class="container">
+            <div id="featured-post">
+                <!-- Latest post will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Older Posts Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="older-posts-title">More Posts</h2>
+            <div class="blog-grid" id="blog-grid">
+                <!-- Older posts will be dynamically loaded here -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Loading posts...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo-icon.webp" alt="Bros Devs" class="footer-logo">
+                    <h3>Bros Devs</h3>
+                    <p>Creating immersive Roblox experiences since 2024</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#games">Games</a></li>
+                        <li><a href="index.html#achievements">Achievements</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a rel="noopener" href="https://www.roblox.com/communities/33910951/Ghoulax-Studios" target="_blank"
+                            title="Roblox Studios Group" class="roblox-icon">
+                            <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg">
+                        </a>
+                        <a rel="noopener" href="https://discord.gg/ghoulaxstudio" target="_blank" title="Discord">
+                            <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                        </a>
+                        <a rel="noopener" href="https://x.com/GhoulaxDev" target="_blank" title="X" class="social-icon-link">
+                            <svg viewBox="0 0 24 24" class="social-svg">
+                                <path fill="currentColor"
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a rel="noopener" href="https://www.youtube.com/@ghoulaxtheking" target="_blank" title="YouTube"
+                            class="social-icon-link">
+                            <svg viewBox="0 0 24 24" class="social-svg">
+                                <path fill="currentColor"
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bros Devs. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for the Roblox community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

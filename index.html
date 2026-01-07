@@ -1,105 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bros Devs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bros Devs - Indie game studio behind popular Roblox incremental and simulator games. Explore our games, meet our team, and join our community!">
+    <meta name="keywords" content="Bros Devs, Roblox, Roblox Games, Simulator, Incremental Games, Button Simulator, Mining Simulator">
+    <meta name="author" content="Bros Devs">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Bros Devs - Roblox Game Development Studio">
+    <meta property="og:description" content="Indie game studio behind popular Roblox incremental and simulator games.">
+    <meta property="og:image" content="assets/logo-full.webp">
+    <meta property="og:type" content="website">
+
+    <title>Bros Devs - Roblox Game Development Studio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-icon.webp">
 </head>
 <body>
-  
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="container">
-      <h1 class="logo">Bros Devs</h1>
-      <div class="menu-toggle">&#9776;</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#games">Games</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#merch">idk</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <h2>Bros Devs</h2>
-    <p>We create engaging games on Roblox and beyond.</p>
-    <a href="#games" class="cta-button">Explore Our Games</a>
-  </section>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo-icon.webp" alt="Bros Devs Logo">
+                <span>Bros Devs</span>
+            </a>
 
-  <!-- GAMES -->
-  <section id="games" class="section">
-    <h2>Our Games</h2>
-    <div class="game-carousel">
-      <div class="game-card">
-        <img src="img/game1.jpg" alt="Game 1" loading="lazy" />
-        <h3>Rune Clicker: Rebirth</h3>
-        <p>Collect runes and become the best player!</p>
-        <a href="https://www.roblox.com/games/16779369397/x2-Event-Rune-Clicker-Rebirth" target="_blank">View on Roblox</a>
-      </div>
-      <div class="game-card">
-        <img src="img/game2.jpg" alt="Game 2" loading="lazy" />
-        <h3>Rune Rebirth 2</h3>
-        <p>Collect runes and become the best player!</p>
-        <a href="https://www.roblox.com/games/74909406920213/Rune-Rebirth-2" target="_blank">View on Roblox</a>
-      </div>
-    </div>
-  </section>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
 
-  <!-- BLOG -->
-  <section id="blogs" class="section">
-    <h2>Latest Dev Blog</h2>
-    <div class="blog-list">
-      <article>
-      <!-- <img src="img/blog1.jpg" alt="Blog 1" loading="lazy" /> -->
-        <h3>Rune Clicker Rebirth </h3>
-        <p>Watch all Dev-Logs about this game!</p>
-        <a href="rcr.html">See Dev-Blogs</a>
-      </article>
-    </div>
-  </section>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="subscribe.html" class="nav-link nav-subscribe">Subscribe</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- MERCH -->
-  <section id="merch" class="section">
-    <h2>???</h2>
-    <div class="merch-grid">
-      <div class="merch-item">
-        <img src="img/plush1.jpg" alt="???" loading="lazy" />
-        <h4>???</h4>
-        <p>???</p>
-        <a href="#">...</a>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <img src="assets/logo-full-removebg-preview.png" alt="Bros Devs Moving Logo" class="hero-logo">
+            </div>
+            <p class="hero-tagline">Creating Immersive Roblox Experiences</p>
+            <p class="hero-description">
+                Indie game studio specializing in incremental games, simulators, and engaging gaming experiences on
+                Roblox.
+            </p>
+            <div class="hero-buttons">
+                <a href="#games" class="btn btn-primary">
+                    <i class="fas fa-gamepad"></i> Our Games
+                </a>
+                <a rel="noopener" href="https://www.roblox.com/groups/33910951/Ghoulax-Studios" target="_blank"
+                    class="btn btn-secondary">
+                    <i class="fab fa-roblox"></i> Join Group
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="400000" data-stat="total-visits">400k</span>
+                    <span class="stat-label">Total Visits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5500" data-stat="group-members">5.5K</span>
+                    <span class="stat-label">Group Members</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="0" data-stat="playing">0</span>
+                    <span class="stat-label">Playing Now</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="600" data-stat="discord-members">600</span>
+                    <span class="stat-label">Discord Members</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"> <i class="fas fa-chevron-down"></i> </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="container">
-      <div class="footer-links">
-        <a href="#">Terms Of Service</a>
-        <a href="#">No Refund Policy</a>
-      </div>
-      <div class="social">
-        <a href="#">Twitter</a>
-        <a href="#">Discord</a>
-        <a href="#">YouTube</a>
-        <a href="#">Roblox</a>
-      </div>
-      <p>© 2025 BrosDevs. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Games Section -->
+    <section class="section games-section" id="games">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-gamepad"></i> Our Games
+            </h2>
+            <p class="section-subtitle">Explore our ever-expanding library of Roblox games</p>
 
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+            <div class="games-grid">
+                <!-- Game 1: Garden Incremental (Latest) -->
+                <div class="game-card featured">
+                    <div class="game-badge">🔥 LATEST</div>
+                    <div class="game-image">
+                        <img src="assets/garden incremental.webp" loading="lazy" alt="Rune Clicker: Rebirth"
+                            class="game-thumbnail">
+                        <div class="game-overlay">
+                            <a rel="noopener" href="https://www.roblox.com/games/81566824074063/Garden-Incremental" target="_blank"
+                                class="play-btn">
+                                <i class="fas fa-play"></i> Play Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">🖱️ Rune Clicker: Rebirth</h3>
+                        <p class="game-release"><i class="fas fa-calendar-alt"></i> Released: July 12, 2024</p>
+                        <p class="game-description">
+                            Click on the screen to gain points! Buy runes, discover new runes rarities and types, reset
+                            layers for powerful bonuses, and compete on leaderboards!
+                        </p>
+                        <div class="game-tags">
+                            <span class="tag">Clicker</span>
+                            <span class="tag">Idle</span>
+                            <span class="tag">Simulation</span>
+                        </div>
+                    </div>
+                </div>
 
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
+                <!-- Game 2: Eternal Incremental -->
+                <div class="game-card featured">
+                    <div class="game-image">
+                        <img src="assets/garden incremental.webp" loading="lazy" alt="Eternal Incremental"
+                            class="game-thumbnail">
+                        <div class="game-overlay">
+                            <a rel="noopener" href="https://www.roblox.com/games/81566824074063/Garden-Incremental" target="_blank"
+                                class="play-btn">
+                                <i class="fas fa-play"></i> Play Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">💫 Eternal Incremental</h3>
+                        <p class="game-release"><i class="fas fa-calendar-alt"></i> Upcoming: Summer, no date yet June-September</p>
+                        <p class="game-description">
+                            Click on the screen to gain points! Buy runes, discover new runes rarities and types, reset
+                            layers for powerful bonuses, and compete on leaderboards!
+                        </p>
+                        <div class="game-tags">
+                            <span class="tag">Incremental</span>
+                            <span class="tag">Idle</span>
+                            <span class="tag">Simulation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements-section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-trophy"></i> Our Achievements
+            </h2>
+            <p class="section-subtitle">Milestones we're proud of</p>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number" data-target="400000" data-stat="total-visits">400k</div>
+                    <div class="achievement-label">Total Visits</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="achievement-number" data-target="1">1</div>
+                    <div class="achievement-label">Games Created</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-user-group"></i>
+                    </div>
+                    <div class="achievement-number" data-target="5500" data-stat="group-members">5.5K</div>
+                    <div class="achievement-label">Roblox Group</div>
+                </div>
+
+                <div class="achievement-card discord-card">
+                    <div class="achievement-icon">
+                        <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                    </div>
+                    <div class="achievement-number" data-target="600" data-stat="discord-members">600</div>
+                    <div class="achievement-label">Discord Members</div>
+                    <a rel="noopener" href="https://discord.gg/ghoulaxstudio" target="_blank" class="discord-join-btn">
+                        <i class="fab fa-discord"></i> Join Server
+                    </a>
+                </div>
+            </div>
+
+            <div class="milestones">
+                <h3 class="milestones-title">🏆 Major Milestones</h3>
+                <div class="milestone-timeline">
+                    <div class="milestone-item completed">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">February 22, 2024</span>
+                            <h4>🎉 Studio Founded</h4>
+                            <p>Bros Devs was born with a vision to create engaging Roblox experiences</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item completed">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">June 12, 2024</span>
+                            <h4>🚀 First Game Launch</h4>
+                            <p>Rune Clicker: Rebirth - Our first release that started the journey</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item completed">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">2025</span>
+                            <h4>🔥 10 Million+ Visits!</h4>
+                            <p>Hit 10 million total game visits across all our experiences!</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item completed">
+                        <div class="milestone-dot"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">2024 - 2025</span>
+                            <h4>🎮 5 Games Portfolio</h4>
+                            <p>Expanded our catalog: BSM2, Anime Power, Cube Market, and Garden Incremental!</p>
+                        </div>
+                    </div>
+                    <div class="milestone-item milestone-current">
+                        <div class="milestone-dot pulse"></div>
+                        <div class="milestone-content">
+                            <span class="milestone-date">Current</span>
+                            <h4>🌟 Growing Strong</h4>
+                            <p>220K+ Roblox group members, 17K+ Discord members, 11M+ total visits and counting!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="section roadmap-section" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-rocket"></i> What's Next
+            </h2>
+            <p class="section-subtitle">Our vision for the future of Ghoulax Studio's</p>
+
+            <div class="whats-next-grid">
+                <!-- Column 1: Active Games -->
+                <div class="wn-column">
+                    <h3 class="wn-col-title">Current Games</h3>
+                    <div class="wn-card active-game-card">
+                        <div class="wn-badge-container">
+                            <span class="wn-badge live">🔴 LIVE</span>
+                        </div>
+                        <div class="wn-card-image">
+                            <img src="assets/garden incremental.webp" alt="Garden Incremental" loading="lazy">
+                            <div class="wn-card-overlay">
+                                <a rel="noopener" href="https://www.roblox.com/games/81566824074063/Garden-Incremental" target="_blank"
+                                    class="wn-play-btn">
+                                    <i class="fas fa-play"></i> Play
+                                </a>
+                            </div>
+                        </div>
+                        <div class="wn-card-content">
+                            <h4>Garden Incremental</h4>
+                            <div class="wn-update-info">
+                                <span class="update-label">Latest Update:</span>
+                                <span class="update-date" id="gi-last-update">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Incoming Projects -->
+                <div class="wn-column">
+                    <h3 class="wn-col-title">Incoming Games</h3>
+                    <div class="wn-card project-card">
+                        <div class="wn-badge-container">
+                            <span class="wn-badge planned">🗓️ PLANNED</span>
+                        </div>
+                        <div class="wn-project-placeholder">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="wn-card-content">
+                            <h4>Project <span class="rbs-title">Rune Grinding Simulator</span></h4>
+                            <p class="project-date">Coming Early February 2026</p>
+                            <p class="project-desc">A new experience is being forged...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Community Goals -->
+                <div class="wn-column">
+                    <h3 class="wn-col-title">Our Goals</h3>
+                    <div class="wn-card goals-card">
+                        <ul class="wn-goals-list">
+                            <li class="wn-goal completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>10M+ Total Game Visits</span>
+                            </li>
+                            <li class="wn-goal completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>200K+ Group Members</span>
+                            </li>
+                            <li class="wn-goal completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>5 Games Released</span>
+                            </li>
+                            <li class="wn-goal in-progress">
+                                <div class="goal-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+                                <span>25M Total Game Visits</span>
+                                <div class="goal-progress-bar">
+                                    <div class="progress-fill" style="width: 45%;"></div>
+                                </div>
+                            </li>
+                            <li class="wn-goal">
+                                <i class="far fa-circle"></i>
+                                <span>500K Group Members</span>
+                            </li>
+                            <li class="wn-goal">
+                                <i class="far fa-circle"></i>
+                                <span>50K Discord Members</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h3><i class="fas fa-bell"></i> Stay Updated</h3>
+                <p>Join our communities to get the latest news, sneak peeks, and updates!</p>
+                <div class="newsletter-buttons">
+                    <a rel="noopener" href="https://www.roblox.com/communities/33910951/Ghoulax-Studios" target="_blank"
+                        class="btn btn-primary">
+                        <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg btn-icon"> Roblox Group
+                    </a>
+                    <a rel="noopener" href="https://www.roblox.com/communities/356937272/Ghoulax-Games" target="_blank"
+                        class="btn btn-secondary">
+                        <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg btn-icon"> Games Group
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section" id="team">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-users"></i> Meet The Team
+            </h2>
+            <p class="section-subtitle">The talented people behind Ghoulax Studio's</p>
+
+            <div class="team-grid">
+                <!-- Faka - Founder & Owner -->
+                <div class="team-card team-leader">
+                    <div class="team-avatar">
+                        <img src="" loading="lazy" alt="Faka">
+                        <span class="status-indicator offline" data-status="Offline"
+                            data-discord-id="871450648904863785"></span>
+                    </div>
+                    <h3 class="team-name">Faka</h3>
+                    <div class="team-tags">
+                        <span class="team-tag tag-founder">👑 Owner & Founder</span>
+                        <span class="team-tag tag-dev">⭐ Main Developer</span>
+                        <span class="team-tag tag-scripter">💻 Scripter & UI Designer</span>
+                    </div>
+                    <p class="team-joined">Founder</p>
+                    <div class="team-socials">
+                        <a rel="noopener" href="https://www.roblox.com/users/644143396/profile" target="_blank" title="Roblox"
+                            class="roblox-icon">
+                            <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg">
+                        </a>
+                        <a rel="noopener" href="https://discordapp.com/users/871450648904863785" target="_blank" title="Discord">
+                            <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Zyfley - Studio Manager
+                <div class="team-card team-manager team-website-creator">
+                    <div class="website-creator-badge">🌐 Website Creator</div>
+                    <div class="team-avatar">
+                        <img src="assets/zyfley.webp" loading="lazy" alt="Zyfley">
+                        <span class="status-indicator offline" data-status="Offline"
+                            data-discord-id="687572361121103873"></span>
+                    </div>
+                    <h3 class="team-name">Zyfley</h3>
+                    <div class="team-tags">
+                        <span class="team-tag tag-manager">🎯 Studio Manager</span>
+                        <span class="team-tag tag-dev">⭐ Main Developer</span>
+                        <span class="team-tag tag-balancer">⚖️ Balancer</span>
+                    </div>
+                    <p class="team-joined">Joined: May 2024</p>
+                    <div class="team-socials">
+                        <a href="https://www.roblox.com/users/721657305/profile" target="_blank" title="Roblox"
+                            class="roblox-icon">
+                            <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg">
+                        </a>
+                        <a href="https://discordapp.com/users/687572361121103873" target="_blank" title="Discord">
+                            <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Tehleat - Main Developer 
+                <div class="team-card team-maindev">
+                    <div class="team-avatar">
+                        <img src="assets/tehleat.webp" loading="lazy" alt="Tehleat">
+                        <span class="status-indicator offline" data-status="Offline"
+                            data-discord-id="1238395197889445905"></span>
+                    </div>
+                    <h3 class="team-name">Tehleat</h3>
+                    <div class="team-tags">
+                        <span class="team-tag tag-dev">⭐ Main Developer</span>
+                        <span class="team-tag tag-builder">🏗️ Modeler</span>
+                        <span class="team-tag tag-builder">🔨 Builder</span>
+                    </div>
+                    <p class="team-joined">Joined: February 2024</p>
+                    <div class="team-socials">
+                        <a href="https://www.roblox.com/users/3482963688/profile" target="_blank" title="Roblox"
+                            class="roblox-icon">
+                            <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg">
+                        </a>
+                        <a href="https://discordapp.com/users/1238395197889445905" target="_blank" title="Discord">
+                            <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Join Card -->
+                <div class="team-card join-card">
+                    <div class="team-avatar">
+                        <div class="avatar-fallback" style="display:flex;"><i class="fas fa-user-plus"></i></div>
+                    </div>
+                    <h3 class="team-name">Want to Join?</h3>
+                    <div class="team-tags">
+                        <span class="team-tag tag-hiring">✨ We're Hiring!</span>
+                        <span class="team-tag tag-scripter">💻 Scripter</span>
+                        <span class="team-tag tag-animator">🎬 Animator</span>
+                        <span class="team-tag tag-vfx">✨ VFX Artist</span>
+                        <span class="team-tag tag-builder">🏗️ Modeler/Builder</span>
+                    </div>
+                    <p class="team-joined">Join our studio</p>
+                    <a href="support.html" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo-icon.webp" alt="Bros Devs" class="footer-logo">
+                    <h3>Bros Devs</h3>
+                    <p>Creating immersive Roblox experiences since 2024</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a rel="noopener" href="https://www.roblox.com/communities/33910951/Ghoulax-Studios" target="_blank"
+                            title="Roblox Studios Group" class="roblox-icon">
+                            <img src="assets/robloxicon.svg" alt="Roblox" class="roblox-svg">
+                        </a>
+                        <a rel="noopener" href="https://discord.gg/ghoulaxstudio" target="_blank" title="Discord">
+                            <img src="assets/discordicon.svg" alt="Discord" class="discord-svg">
+                        </a>
+                        <a rel="noopener" href="https://x.com/GhoulaxDev" target="_blank" title="X" class="social-icon-link">
+                            <svg viewBox="0 0 24 24" class="social-svg">
+                                <path fill="currentColor"
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a rel="noopener" href="https://www.youtube.com/@ghoulaxtheking" target="_blank" title="YouTube"
+                            class="social-icon-link">
+                            <svg viewBox="0 0 24 24" class="social-svg">
+                                <path fill="currentColor"
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bros Devs. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for the Roblox community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,257 @@
+/* ============================================
+   GHOULAX STUDIO'S - SUPPORT PAGE STYLES
+   Modern support/contact page styling
+   ============================================ */
+
+/* CSS Variables (inherit from main) */
+:root {
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --primary: #4A90D9;
+    --primary-gradient: linear-gradient(135deg, #4A90D9 0%, #357ABD 100%);
+    --bg-dark: #0a0a1a;
+    --bg-card: rgba(20, 25, 45, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #b8c5d6;
+    --text-muted: #6b7a8f;
+}
+
+/* Support Header */
+.support-header {
+    padding: 130px 0 40px;
+    text-align: center;
+    position: relative;
+}
+
+.support-header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(74, 144, 217, 0.8), rgba(139, 92, 246, 0.5), transparent);
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.support-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.support-title i {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.support-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* Support Section */
+.support-section {
+    padding: 40px 0 80px;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Support Cards */
+.support-card {
+    background: linear-gradient(145deg, rgba(20, 30, 50, 0.9), rgba(10, 15, 30, 0.95));
+    border-radius: 24px;
+    padding: 35px;
+    border: 1px solid rgba(74, 144, 217, 0.2);
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-title i {
+    color: var(--primary);
+}
+
+.card-desc {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Connect Links */
+.connect-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.connect-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(74, 144, 217, 0.08);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text-primary);
+    border: 1px solid rgba(74, 144, 217, 0.15);
+    transition: all 0.3s ease;
+}
+
+.connect-link:hover {
+    background: rgba(74, 144, 217, 0.15);
+    border-color: rgba(74, 144, 217, 0.4);
+    transform: translateX(5px);
+}
+
+.connect-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.connect-icon.x-svg,
+.connect-icon.youtube-svg {
+    color: var(--primary);
+}
+
+.connect-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.connect-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.connect-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.connect-link i.fa-arrow-right {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.connect-link:hover i.fa-arrow-right {
+    transform: translateX(4px);
+    color: var(--primary);
+}
+
+/* Discord Link Specific */
+.discord-link:hover {
+    background: rgba(88, 101, 242, 0.15);
+    border-color: rgba(88, 101, 242, 0.4);
+}
+
+/* Form Styles */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.support-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.support-form label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+    padding: 14px 18px;
+    background: rgba(10, 15, 30, 0.6);
+    border: 1px solid rgba(74, 144, 217, 0.2);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+}
+
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(74, 144, 217, 0.15);
+}
+
+.support-form input::placeholder,
+.support-form textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.support-form select {
+    cursor: pointer;
+}
+
+.support-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.support-form .btn-submit {
+    padding: 16px 32px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .support-header {
+        padding: 110px 0 30px;
+    }
+
+    .support-card {
+        padding: 25px;
+    }
+
+    .connect-link {
+        padding: 14px 16px;
+    }
+}

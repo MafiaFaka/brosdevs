@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "2026-01-02-gi-christmas-update-2",
+    "title": "🎄 Christmas Update – Part 2",
+    "date": "2026-01-02",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/gichristmasupdate.webp",
+    "author": "Ghoulax Team",
+    "tags": [
+      "update",
+      "christmas",
+      "holiday"
+    ],
+    "excerpt": "Part 2 of the Christmas Update is here! New Santa House, currencies, reset layers, runes, and more!"
+  },
+  {
+    "slug": "2025-12-21-gi-christmas-update",
+    "title": "🎄 Christmas Update – Part 1",
+    "date": "2025-12-21",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/gichristmasupdate.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "event",
+      "christmas",
+      "holiday"
+    ],
+    "excerpt": "The holiday season is here! Enter the Christmas World and celebrate with festive content!"
+  },
+  {
+    "slug": "2025-12-15-gi-space-update",
+    "title": "Update 7 – 🪐 Space World",
+    "date": "2025-12-15",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate7.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "space",
+      "new-world"
+    ],
+    "excerpt": "Explore the cosmos in the biggest world yet! Discover planets, unlock cosmic currencies, and ascend to new heights!"
+  },
+  {
+    "slug": "2025-11-26-gi-mushroom-update",
+    "title": "Update 6 – 🍄 Mushroom World",
+    "date": "2025-11-26",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate6.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "mushroom",
+      "guilds"
+    ],
+    "excerpt": "A massive update bringing new worlds, guild improvements, and tons of content!"
+  },
+  {
+    "slug": "2025-11-09-gi-fishing-update",
+    "title": "🌊 Fishing Update",
+    "date": "2025-11-09",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/gifishingupdate.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "fishing",
+      "ocean"
+    ],
+    "excerpt": "Cast your line and explore the Ocean World! A brand new activity with tons of new features!"
+  },
+  {
+    "slug": "2025-10-31-gi-halloween-update",
+    "title": "🎃 Halloween Update",
+    "date": "2025-10-31",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/gihalloweenupdate.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "event",
+      "halloween",
+      "spooky"
+    ],
+    "excerpt": "The spookiest update of the year is here! Enter the Halloween World and face mobs, bosses, and collect candy!"
+  },
+  {
+    "slug": "2025-10-19-gi-cyber-expansion",
+    "title": "Mini Update – Cyber World Expansion ⚡",
+    "date": "2025-10-19",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate3.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "cyber",
+      "expansion"
+    ],
+    "excerpt": "Completing the Cyber World with new features and currencies!"
+  },
+  {
+    "slug": "2025-10-18-gi-cyber-update",
+    "title": "Update 3 – Cyber World ⚡",
+    "date": "2025-10-18",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate3.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "cyber",
+      "new-world"
+    ],
+    "excerpt": "The Cyber World is here! Harness energy, power, and circuits in this electrifying new world!"
+  },
+  {
+    "slug": "2025-10-08-gi-500k-event",
+    "title": "500K Visits Event Update 🎉",
+    "date": "2025-10-08",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate2.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "event",
+      "milestone",
+      "celebration"
+    ],
+    "excerpt": "Thank you all for 500K visits! Celebrate with a special Event World and exclusive rewards!"
+  },
+  {
+    "slug": "2025-10-03-gi-mine-update",
+    "title": "Update 2 – Mine Update ⛏️",
+    "date": "2025-10-03",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate2.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "mine",
+      "mining"
+    ],
+    "excerpt": "The Mine World brings a brand new gameplay style! Break ores, collect resources, and sell for profit!"
+  },
+  {
+    "slug": "2025-09-20-gi-desert-update",
+    "title": "Update 1 – Desert Update 🏜️",
+    "date": "2025-09-20",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/giupdate1.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "desert",
+      "new-world"
+    ],
+    "excerpt": "The Desert World is here! Explore new lands, unlock new currencies, and dive into an all-new upgrade tree!"
+  },
+  {
+    "slug": "2025-09-14-gi-small-update",
+    "title": "Small Update",
+    "date": "2025-09-14",
+    "game": "Garden Incremental",
+    "thumbnail": "assets/gioriginalthumbnail.webp",
+    "author": "GhoulaxDev",
+    "tags": [
+      "update",
+      "patch",
+      "bugfix"
+    ],
+    "excerpt": "A small update to squash bugs and make adjustments. More content coming next weekend!"
+  }
+]
