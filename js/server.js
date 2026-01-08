@@ -81,5 +81,7 @@ app.listen(port, () => {
     console.log(`Servidor backend escuchando en el puerto ${port}`);
 });
 
+
+const token = process.env.DISCORD_TOKEN;
 // Loguear el bot con el token de Discord
-client.login('TU_BOT_TOKEN');  // Reemplaza con el token de tu bot de Discord
+client.login(token);  // Reemplaza con el token de tu bot de Discord
