@@ -836,58 +836,81 @@ async function loadLiveStats() {
     */
 
 /* ============================================
-   LIVE STATS FROM MY API (Backend)
+   LIVE STATS FROM MY API (Replit Backend)
    ============================================ */
-async function loadLiveStats() {
-    const API_BASE = 'https://<tu_nombre_de_usuario>.<tu_proyecto>.repl.co/api';  // URL del servidor backend (deberás poner la URL de Replit)
 
-    // Helper para actualizar todos los elementos con el atributo data-stat
-    function updateStat(selector, value) {
-        const elements = document.querySelectorAll(`[data-stat="${selector}"]`);
+async function loadLiveStats() {
+    // URL BASE DE TU API EN REPLIT
+    const API_BASE = "https://c8a5dcd8-9151-493b-87b0-53e9c454f45b-00-3amh815t8k6mg.spock.replit.dev/api";
+
+    // IDs de los juegos (UNIVERSE IDS) separados por coma
+    const GAME_IDS = "5766746960,8161756284";
+
+    // Helper para actualizar elementos con data-stat
+    function updateStat(statName, value) {
+        const elements = document.querySelectorAll(`[data-stat="${statName}"]`);
         elements.forEach(el => {
             if (value !== null && value !== undefined) {
-                el.setAttribute('data-target', value);
-                el.textContent = formatNumber(value); // Formatear el número si es necesario
+                el.setAttribute("data-target", value);
+                el.textContent = formatNumber(value);
             }
         });
     }
 
     try {
-        const gameIds = '16779369397,88491083870667';  // Game IDs separados por coma (reemplaza con tus propios IDs)
         const [playersRes, groupsRes, discordRes] = await Promise.allSettled([
-            fetch(`${API_BASE}/players?gameIds=${gameIds}`).then(r => r.ok ? r.json() : null),
+            fetch(`${API_BASE}/players?gameIds=${GAME_IDS}`).then(r => r.ok ? r.json() : null),
             fetch(`${API_BASE}/groups`).then(r => r.ok ? r.json() : null),
             fetch(`${API_BASE}/discord`).then(r => r.ok ? r.json() : null)
         ]);
 
-        // Actualizar estadísticas de jugadores
-        if (playersRes.status === 'fulfilled' && playersRes.value) {
-            playersRes.value.forEach(gameData => {
-                updateStat(`total-visits-${gameData.gameId}`, gameData.totalVisits);
-                updateStat(`playing-${gameData.gameId}`, gameData.totalPlaying);
-            });
+        /* =========================
+           ROBLOX – JUEGOS
+        ========================= */
+
+        if (playersRes.status === "fulfilled" && playersRes.value) {
+            updateStat("total-visits", playersRes.value.totalVisits);
+            updateStat("playing", playersRes.value.totalPlaying);
         }
 
-        // Actualizar estadísticas de grupo
-        if (groupsRes.status === 'fulfilled' && groupsRes.value) {
-            updateStat('group-members', groupsRes.value.totalMembers);
+        /* =========================
+           ROBLOX – GRUPO
+        ========================= */
+
+        if (groupsRes.status === "fulfilled" && groupsRes.value) {
+            updateStat("group-members", groupsRes.value.totalMembers);
         }
 
-        // Actualizar estadísticas de Discord
-        if (discordRes.status === 'fulfilled' && discordRes.value) {
-            updateStat('discord-members', discordRes.value.memberCount);
+        /* =========================
+           DISCORD
+        ========================= */
+
+        if (discordRes.status === "fulfilled" && discordRes.value) {
+            updateStat("discord-members", discordRes.value.memberCount);
         }
 
-        console.log('%c📊 Live stats loaded from API!', 'color: #22c55e;');
+        console.log("%c📊 Live stats loaded from API!", "color: #22c55e;");
+
     } catch (error) {
-        console.log('%c⚠️ Stats API not available - using default values', 'color: #f59e0b;');
+        console.error("⚠️ Error loading live stats:", error);
     }
 }
 
-// Función para formatear los números (opcional)
+/* ============================================
+   NUMBER FORMAT
+   ============================================ */
+
 function formatNumber(number) {
-    return new Intl.NumberFormat().format(number);
+    return new Intl.NumberFormat("en-US").format(number);
 }
+
+/* ============================================
+   AUTO LOAD
+   ============================================ */
+
+// Cargar stats al abrir la página
+document.addEventListener("DOMContentLoaded", loadLiveStats);
+
 
 
 /* ============================================
