@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Bros Devs</title>
+    <meta name="description" content="Development blog post from Bros Devs">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:site_name" content="Bros Devs">
+    <meta property="og:title" content="Blog Post | Bros Devs">
+    <meta property="og:description" content="Development blog post from Bros Devs">
+    <meta property="og:image" content="./assets/logo-full.webp">
+    <meta property="og:type" content="article">
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/logo-icon.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-icon.webp" alt="Bros Devs Logo">
+                <span>Bros Devs</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#games" class="nav-link">Games</a></li>
+                <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="index.html#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="subscribe.html" class="nav-link nav-subscribe">Subscribe</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Post Container -->
+    <article class="post-container">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="blog.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+
+            <!-- Post Header -->
+            <header class="post-header" id="post-header">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Loading post...</span>
+                </div>
+            </header>
+
+            <!-- Post Content -->
+            <div class="post-content" id="post-content">
+                <!-- Content loaded dynamically -->
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo-icon.webp" alt="Bros Devs" class="footer-logo">
+                    <h3>Bros Devs</h3>
+                    <p>Creating immersive Roblox experiences since 2024</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#games">Games</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bros Devs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
