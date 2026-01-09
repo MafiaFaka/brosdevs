@@ -300,7 +300,7 @@ async function loadPost() {
 
     try {
         // Try to fetch the markdown file
-        const mdResponse = await fetch(`posts/${slug}.md`);
+        const mdResponse = await fetch(`posts/md/${slug}.md`);
         if (!mdResponse.ok) throw new Error('Fetch failed');
         markdown = await mdResponse.text();
     } catch (error) {
@@ -318,7 +318,7 @@ async function loadPost() {
     const { frontmatter, content } = parseMarkdown(markdown);
 
     // Update page title
-    document.title = `${frontmatter.title} | Ghoulax Studio's`;
+    document.title = `${frontmatter.title} | Bros Devs`;
 
     // Render header
     postHeader.innerHTML = renderPostHeader(frontmatter);
@@ -377,7 +377,7 @@ function renderPostHeader(frontmatter) {
                 <i class="fas fa-calendar"></i> ${formattedDate}
             </span>
             <span class="post-author">
-                <i class="fas fa-user"></i> ${frontmatter.author || 'Ghoulax Team'}
+                <i class="fas fa-user"></i> ${frontmatter.author || 'Bros Devs Team'}
             </span>
         </div>
         <h1 class="post-title">${frontmatter.title}</h1>

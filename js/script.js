@@ -783,59 +783,6 @@ console.log('%cWelcome to our website! Try the Konami Code for a surprise... �
 console.log('%c✨ Enhanced with modern effects!', 'font-size: 12px; color: #a855f7;');
 
 /* ============================================
-   LIVE STATS FROM RAILWAY API (Internal) | OLD VERSION
-   ============================================ 
-async function loadLiveStats() {
-    // Use relative path since frontend & backend are on the same domain now!
-    const API_BASE = '/api';
-
-    // Helper to update ALL stat elements with matching data-stat attribute
-    function updateStat(selector, value) {
-        const elements = document.querySelectorAll(`[data-stat="${selector}"]`);
-        elements.forEach(el => {
-            if (value !== null && value !== undefined) {
-                // Update the target value
-                el.setAttribute('data-target', value);
-                // Directly set text first to ensure it shows even if animation fails
-                el.textContent = formatNumber(value);
-
-                // Optional: Restart animation for a cool effect
-                // animateCounter(el);
-            }
-        });
-    }
-
-    try {
-        const [playersRes, groupsRes, discordRes] = await Promise.allSettled([
-            fetch(`${API_BASE}/players`).then(r => r.ok ? r.json() : null),
-            fetch(`${API_BASE}/groups`).then(r => r.ok ? r.json() : null),
-            fetch(`${API_BASE}/discord`).then(r => r.ok ? r.json() : null)
-        ]);
-
-        // Update player stats
-        if (playersRes.status === 'fulfilled' && playersRes.value) {
-            updateStat('total-visits', playersRes.value.totalVisits);
-            updateStat('playing', playersRes.value.totalPlaying);
-        }
-
-        // Update group stats
-        if (groupsRes.status === 'fulfilled' && groupsRes.value) {
-            updateStat('group-members', groupsRes.value.totalMembers);
-        }
-
-        // Update Discord stats
-        if (discordRes.status === 'fulfilled' && discordRes.value) {
-            updateStat('discord-members', discordRes.value.memberCount);
-        }
-
-        console.log('%c📊 Live stats loaded from API!', 'color: #22c55e;');
-    } catch (error) {
-        console.log('%c⚠️ Stats API not available - using default values', 'color: #f59e0b;');
-    }
-}
-    */
-
-/* ============================================
    LIVE STATS FROM MY API (Replit Backend)
    ============================================ */
 
@@ -987,11 +934,11 @@ async function initSmartRoadmap() {
 
         const posts = await response.json();
 
-        // Find latest Garden Incremental post
+        // Find latest Rune Clicker: Rebirth post
         // Posts are assumed to be sorted, but let's be safe
         const updates = posts.filter(post =>
-            post.game === 'Garden Incremental' ||
-            post.tags.includes('Garden Incremental')
+            post.game === 'Rune Clicker: Rebirth' ||
+            post.tags.includes('Rune Clicker: Rebirth')
         ).sort((a, b) => new Date(b.date) - new Date(a.date));
 
         if (updates.length > 0) {
