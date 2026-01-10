@@ -2,9 +2,9 @@
 title: Release 🎆
 date: 2024-07-03
 game: Rune Clicker Rebirth
-thumbnail: ../../assets/runeclickerrebirth.webp
-author: "Bros Devs Team"
-tags: ["release", "rune clicker: rebirth", "christmas"]
+thumbnail: assets2/runeclickerrebirth.png
+author: Bros Devs Team
+tags: release, rune clicker rebirth, christmas
 ---
 
 # Release 🎆

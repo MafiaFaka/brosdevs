@@ -2,7 +2,7 @@
 title: "Update 0.5"
 date: 2024-07-05
 game: "Rune Clicker: Rebirth"
-thumbnail: assets/runeclickerrebirth.webp
+thumbnail: assets2/runeclickerrebirth.png
 author: "Bros Devs Team"
 tags: ["release", "rune clicker: rebirth", "christmas"]
 ---
